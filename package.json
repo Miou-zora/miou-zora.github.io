@@ -4,11 +4,7 @@
   "private": true,
   "home": "https://miou-zora.github.io",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.8.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.9.5"
+
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,6 +35,11 @@
     ]
   },
   "devDependencies": {
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.8.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
     "bootstrap": "^5.3.1",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.2.7",
