@@ -4,7 +4,6 @@
   "private": true,
   "home": "https://miou-zora.github.io",
   "dependencies": {
-    "@types/node": "^16.18.50",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",
     "bootstrap": "^5.3.1",
