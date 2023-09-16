@@ -39,5 +39,10 @@ module.exports = {
   },
 
   rules: {
+    '@typescript-eslint/space-before-function-paren': ['error', {
+      anonymous: 'always',
+      named: 'never',
+      asyncArrow: 'always'
+    }]
   }
 }

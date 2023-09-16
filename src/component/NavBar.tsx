@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react'
 
-export default function NavBar() {
-    return (
+export default function NavBar(): JSX.Element {
+  return (
         <>
             <nav style={styles.nav}>
                 <ul style={styles.ul}>
@@ -14,25 +14,25 @@ export default function NavBar() {
                 </ul>
             </nav>
         </>
-    );
+  )
 }
 
 const styles = {
-    nav: {
-        backgroundColor: 'blue',
-        color: 'white',
-        // padding: '1rem',
-    },
-    ul: {
-        display: 'flex',
-        justifyContent: 'space-around',
-        listStyle: 'none',
-    },
-    li: {
-        padding: '0.5rem',
-    },
-    a: {
-        color: 'white',
-        textDecoration: 'none',
-    },
-};
+  nav: {
+    backgroundColor: 'blue',
+    color: 'white'
+    // padding: '1rem',
+  },
+  ul: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    listStyle: 'none'
+  },
+  li: {
+    padding: '0.5rem'
+  },
+  a: {
+    color: 'white',
+    textDecoration: 'none'
+  }
+}
