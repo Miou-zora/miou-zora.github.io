@@ -10,7 +10,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 function App() {
   // document.body.style.backgroundColor = 
   return (
-    <div className="bg-body-secondary" data-bs-theme="dark">
+      <div className="bg-body-secondary" data-bs-theme="dark">
       <Navbar className="bg-body-tertiary" data-bs-theme="dark">
         <Container>
             <Navbar.Brand href="https://github.com/Miou-zora">Miouzora</Navbar.Brand>
