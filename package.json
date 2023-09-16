@@ -4,7 +4,6 @@
   "private": true,
   "home": "https://miou-zora.github.io",
   "dependencies": {
-    "@types/react-dom": "^18.2.7",
     "bootstrap": "^5.3.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
@@ -41,6 +40,8 @@
     ]
   },
   "devDependencies": {
+    "@types/react": "^18.0.38",
+    "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "eslint": "^8.49.0",
