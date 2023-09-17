@@ -1,0 +1,12 @@
+name: Chore
+description: Suggest an chore for the project.
+title: "<title>"
+labels: ["chore"]
+body:
+  - type: textarea
+    id: chore-description
+    attributes:
+      label: Chore Description
+      description: Please enter an explicit description of your chore
+      placeholder: Short and explicit description of your chore...
+      render: markdown
