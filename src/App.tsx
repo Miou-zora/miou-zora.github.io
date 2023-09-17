@@ -15,7 +15,7 @@ function App(): JSX.Element {
             <Navbar.Brand href="https://github.com/Miou-zora">Miouzora</Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="/todo">To Do List</Nav.Link>
+              <Nav.Link href="/todo">To aDo List</Nav.Link>
             </Nav>
         </Container>
       </Navbar>
