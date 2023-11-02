@@ -43,6 +43,7 @@ module.exports = {
       anonymous: 'always',
       named: 'never',
       asyncArrow: 'always'
-    }]
+    }],
+    '@typescript-eslint/indent': ['error', 2]
   }
 }

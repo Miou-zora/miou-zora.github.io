@@ -24,10 +24,12 @@
         "vscode": {
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "zsh",
-                "terminal.integrated.profiles.linux": { "zsh": { "path": "/bin/zsh" } }
+                "terminal.integrated.profiles.linux": { "zsh": { "path": "/bin/zsh" } },
+				"editor.tabSize": 2
             }
         }
     },
+	
 
 	"runArgs": ["-v", "${localWorkspaceFolder}/.devcontainer/.zshrc:/home/node/.zshrc"]
 
