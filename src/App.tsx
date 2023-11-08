@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import * as React from 'react'
+import './styles/Globals.css'
 import HomePage from './pages/Home'
 import ToDoPage from './pages/ToDo'
 import DonePage from './pages/Done'
@@ -8,7 +9,7 @@ import MePage from './pages/Me'
 function App(): JSX.Element {
   document.body.style.backgroundColor = '#202020' // DEV PURPOSE: IT SHOULD BE BLACK WITH WHITE ELLIPSE ON IT
   return (
-    <div className="bg-body-secondary" data-bs-theme="dark">
+    <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
