@@ -1,0 +1,27 @@
+.miouzora {
+    font-size: 205px;
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(255, 255, 255, 0.5);
+    font-family: 'AgainstRegular';
+    font-weight: 1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.workInProgress {
+    font-size: 20px;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    font-family: 'AgainstRegular';
+    font-weight: 1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

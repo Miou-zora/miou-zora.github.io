@@ -2,3 +2,23 @@ body {
     color: #fff; /* Set the color of the blurred text */
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+
+@font-face {
+    font-family: 'AgainstRegular';
+    src: local('against regular'),
+        url('./fonts/against regular.otf') format('opentype'),
+        url('./fonts/against regular.ttf') format('truetype');
+}
+
+.ellipse {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background: rgb(64, 64, 64);
+    border-radius: 50%;
+    filter: blur(300px); /* Apply a blur effect to the ellipse */
+    z-index: -1;
+}

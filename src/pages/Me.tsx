@@ -53,7 +53,6 @@ export default function MePage(): JSX.Element {
           </td>
         </tr>
       </table>
-      <h1 className="text-with-blur">azeazeazeaze</h1>
     </>
   )
 }

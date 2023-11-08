@@ -7,9 +7,10 @@ import DonePage from './pages/Done'
 import MePage from './pages/Me'
 
 function App(): JSX.Element {
-  document.body.style.backgroundColor = '#202020' // DEV PURPOSE: IT SHOULD BE BLACK WITH WHITE ELLIPSE ON IT
+  document.body.style.backgroundColor = '#000000'
   return (
     <div>
+      <div className="ellipse" />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
