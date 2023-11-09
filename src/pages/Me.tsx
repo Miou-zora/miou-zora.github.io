@@ -24,15 +24,15 @@ export default function MePage(): JSX.Element {
     <>
       <PageButton page="/">HOME PAGE</PageButton>
       <h1>ME AS A PERSON</h1>
-      <a>Hello, my name is Alexandre Franquet, self-nicknamed Miouzora, I’m 20. I’m a french student, who’s currently studying at Epitech school. I’m a developper who works to be a game developer one day.</a>
+      <p>Hello, my name is Alexandre Franquet, self-nicknamed Miouzora, I’m 20. I’m a french student, who’s currently studying at Epitech school. I’m a developper who works to be a game developer one day.</p>
       <h1>PROUD OF</h1>
       <table>
         {projects.map((project: Project) => {
           return (
             <td key={project.name}>
-              <tr>{project.name}</tr>
-              <tr>{project.description}</tr>
-              <tr>{project.link}</tr>
+              <tr><p>{project.name}</p></tr>
+              <tr><p>{project.description}</p></tr>
+              <tr><p>{project.link}</p></tr>
             </td>
           )
         })}

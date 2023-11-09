@@ -39,7 +39,7 @@ export default function ToDoPage(): JSX.Element {
             <h1>{selectedProject.name}</h1>
           </tr>
           <tr>
-            <a>{selectedProject.mdDescription}</a>
+            <p>{selectedProject.mdDescription}</p>
           </tr>
         </td>
       </table>
