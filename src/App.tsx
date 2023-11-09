@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Route, Routes, BrowserRouter } from 'react-router-dom'
 import * as React from 'react'
 import './styles/Globals.css'
 import HomePage from './pages/Home'
@@ -11,12 +11,12 @@ function App(): JSX.Element {
   return (
     <div>
       <div className="ellipse" />
-      <BrowserRouter>
+      <BrowserRouter basename={ `/${process.env.PUBLIC_URL}`}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/todo" element={<ToDoPage />} />
-          <Route path="/done" element={<DonePage />} />
-          <Route path="/me" element={<MePage />} />
+          <Route path='' element={<HomePage/>} />
+          <Route path='/todo' element={<ToDoPage/>} />
+          <Route path='/done' element={<DonePage/>} />
+          <Route path='/me' element={<MePage/>} />
         </Routes>
       </BrowserRouter>
     </div>
