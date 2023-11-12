@@ -11,8 +11,15 @@ p {
 @font-face {
     font-family: 'AgainstRegular';
     src: local('against regular'),
-        url('./fonts/against regular.otf') format('opentype'),
-        url('./fonts/against regular.ttf') format('truetype');
+    url('./fonts/against regular.otf') format('opentype'),
+    url('./fonts/against regular.ttf') format('truetype');
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    font-family: 'AgainstRegular';
 }
 
 .ellipse {

@@ -25,7 +25,7 @@ export default function MePage(): JSX.Element {
   return (
     <>
       <div className={style.middleButton}>
-        <PageButton page="/" direction={Direction.Up}>HOME PAGE</PageButton>
+        <PageButton page="/" direction={Direction.Up}><h3>HOME PAGE</h3></PageButton>
       </div>
       <h1>ME AS A PERSON</h1>
       <p>Hello, my name is Alexandre Franquet, self-nicknamed Miouzora, I’m 20. I’m a french student, who’s currently studying at Epitech school. I’m a developper who works to be a game developer one day.</p>

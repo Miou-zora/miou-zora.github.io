@@ -23,7 +23,7 @@ export default function ToDoPage(): JSX.Element {
   const [selectedProject, setSelectedProject] = React.useState(projects[0])
   return (
     <>
-      <PageButton page="/" direction={Direction.Left}>HOME PAGE</PageButton>
+      <PageButton page="/" direction={Direction.Left}><h3>HOME PAGE</h3></PageButton>
       <h1>TODO PAGE</h1>
       <table>
         <td width={100}>
