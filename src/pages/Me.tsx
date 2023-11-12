@@ -1,5 +1,7 @@
 import React from 'react'
 import PageButton from '../components/PageButton'
+import { Direction } from '../components/Triangle'
+import style from './Me.module.css'
 
 class Project {
   name: string
@@ -22,7 +24,9 @@ export default function MePage(): JSX.Element {
 
   return (
     <>
-      <PageButton page="/">HOME PAGE</PageButton>
+      <div className={style.middleButton}>
+        <PageButton page="/" direction={Direction.Up}>HOME PAGE</PageButton>
+      </div>
       <h1>ME AS A PERSON</h1>
       <p>Hello, my name is Alexandre Franquet, self-nicknamed Miouzora, I’m 20. I’m a french student, who’s currently studying at Epitech school. I’m a developper who works to be a game developer one day.</p>
       <h1>PROUD OF</h1>

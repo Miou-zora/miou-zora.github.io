@@ -1,5 +1,6 @@
 .miouzora {
-    font-size: 205px;
+    /* font-size: 205px; */
+    font-size: 11vw;
     text-shadow:
         0 0 15px rgba(255, 255, 255, 0.5),
         0 0 15px rgba(255, 255, 255, 0.5);
@@ -24,4 +25,25 @@
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.leftButton {
+    position: absolute;
+    left: 1%;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.bottomButton {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.rightButton {
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translate(0, -50%);
 }
