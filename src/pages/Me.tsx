@@ -2,6 +2,8 @@ import React from 'react'
 import { Direction } from '../components/Triangle'
 import style from './Me.module.css'
 import PageButtonWithText from '../components/PageButtonWithText'
+import ProList from '../components/ProList'
+import PersoList from '../components/PersoList'
 
 class Project {
   name: string
@@ -41,11 +43,12 @@ export default function MePage(): JSX.Element {
           )
         })}
       </table>
+      <h1>PROFESSIONAL EXPERIENCE</h1>
+      <ProList/>
+      <h1>PERSONAL EXPERIENCE</h1>
+      <PersoList/>
       <table>
         <tr>
-          <td>
-            <h1>CONTACT</h1>
-          </td>
           <td>
             <h1>Discord</h1>
           </td>
