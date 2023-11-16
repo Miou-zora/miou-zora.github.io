@@ -1,4 +1,4 @@
 .middleButton {
-  position: relative;
-  left: 50%;
+  display: flex;
+  justify-content: center;
 }

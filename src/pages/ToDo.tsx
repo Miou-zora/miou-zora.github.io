@@ -1,5 +1,5 @@
 import React from 'react'
-import PageButton from '../components/PageButton'
+import PageButtonWithText from '../components/PageButtonWithText'
 import { Direction } from '../components/Triangle'
 
 class Project {
@@ -23,7 +23,7 @@ export default function ToDoPage(): JSX.Element {
   const [selectedProject, setSelectedProject] = React.useState(projects[0])
   return (
     <>
-      <PageButton page="/" direction={Direction.Left}><h3>HOME PAGE</h3></PageButton>
+      <PageButtonWithText page="/" direction={Direction.Left} text='HOME'/>
       <h1>TODO PAGE</h1>
       <table>
         <td width={100}>
