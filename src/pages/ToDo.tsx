@@ -22,28 +22,34 @@ export default function ToDoPage(): JSX.Element {
   ]
   const [selectedProject, setSelectedProject] = React.useState(projects[0])
   return (
-    <>
-      <PageButtonWithText page="/" direction={Direction.Left} text='HOME'/>
-      <h1>TODO PAGE</h1>
-      <table>
-        <td width={100}>
-          {projects.map((project: Project) => {
-            return (
-              <tr key={project.name}>
-                <a onClick={() => { setSelectedProject(project) }}>{project.name}</a>
-              </tr>
-            )
-          })}
-        </td>
-        <td>
-          <tr>
-            <h1>{selectedProject.name}</h1>
-          </tr>
-          <tr>
-            <p>{selectedProject.mdDescription}</p>
-          </tr>
-        </td>
-      </table>
-    </>
+    <table style={{ width: '100%' }}>
+      <td>
+        <div>
+          <PageButtonWithText page="/" direction={Direction.Left} text='HOME'/>
+        </div>
+      </td>
+      <td>
+        <h1 style={{ textAlign: 'center' }}>TODO</h1>
+        <table>
+          <td width={100}>
+            {projects.map((project: Project) => {
+              return (
+                <tr key={project.name}>
+                  <a onClick={() => { setSelectedProject(project) }}>{project.name}</a>
+                </tr>
+              )
+            })}
+          </td>
+          <td>
+            <tr>
+              <h1>{selectedProject.name}</h1>
+            </tr>
+            <tr>
+              <p>{selectedProject.mdDescription}</p>
+            </tr>
+          </td>
+        </table>
+      </td>
+    </table>
   )
 }
