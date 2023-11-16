@@ -4,15 +4,22 @@ body {
     font-family: 'AgainstRegular';
 }
 
-p {
-    font-family: 'OpenSansHebrew';
-}
-
 @font-face {
     font-family: 'AgainstRegular';
     src: local('against regular'),
     url('./fonts/against regular.otf') format('opentype'),
     url('./fonts/against regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OpenSansHebrew';
+    src: local('OpenSansHebrew-Regular'),
+    url('./fonts/OpenSansHebrew-Regular.ttf') format('truetype');
+}
+
+p {
+    font-family: 'OpenSansHebrew';
+    letter-spacing: 0.155em;
 }
 
 a {
