@@ -64,7 +64,6 @@ export default function PageButton(props: { children: any, page: string, directi
                   stroke='white'
                   strokeWidth={2} />
               </tr>
-              {/* CenterText */}
               <tr style={{ justifyContent: 'center' }}>
                 {props.children}
               </tr>
