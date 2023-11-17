@@ -20,39 +20,37 @@ class ProExperience {
 function DisplayProExperience(props: { proExperience: ProExperience }): JSX.Element {
   return (
     <table>
-      <td>
-        <Triangle
-          direction={ Direction.Right }
-          width={50}
-          height={50}
-          fill='transparent'
-          stroke='white'
-          strokeWidth={2} />
-      </td>
-      <td>
-        <div>
-          <p>{props.proExperience.job}</p>
-          <p>{props.proExperience.company} · {props.proExperience.jobState}</p>
-          <p>{props.proExperience.date.start} · {props.proExperience.date.end}</p>
+      <tr>
+        <td>
+          <div style={{ marginRight: 'min(3vw, 2rem)' }}>
+            <Triangle
+              direction={ Direction.Right }
+              width={40}
+              height={40}
+              fill='transparent'
+              stroke='white'
+              strokeWidth={2} />
+          </div>
+        </td>
+        <td>
+          <p style={{ fontSize: 'min(5vw, 1.7rem)', margin: 'auto' }}>{props.proExperience.job}</p>
+        </td>
+      </tr>
+      <tr>
+        <td/>
+        <td>
+          <p style={{ margin: 'auto' }}>{props.proExperience.company} · {props.proExperience.jobState}</p>
+          <p style={{ margin: 'auto' }}>{props.proExperience.date.start} · {props.proExperience.date.end}</p>
           <table>
             <td>
-              <p>Techs:</p>
-            </td>
-            <td>
-              <Triangle
-                direction={ Direction.Right }
-                width={25}
-                height={25}
-                fill='transparent'
-                stroke='white'
-                strokeWidth={2} />
+              <p style={{ marginRight: '30px' }}>Techs:</p>
             </td>
             <td>
               <p>{props.proExperience.techs.join(' · ')}</p>
             </td>
           </table>
-        </div>
-      </td>
+        </td>
+      </tr>
     </table>
   )
 }
@@ -68,7 +66,7 @@ export default function ProList(): JSX.Element {
       ['Docker', 'Agile methods', 'Full-stack', 'JIRA', 'GitLab', 'Java', 'Vue.js', 'JavaScript', 'Framework Spring', 'JavaServer Pages (JSP)']
     )]
   return (
-    <div>
+    <div style={{ margin: '20px' }}>
       {proExperiences.map((proExperience, index) => {
         return (
           <div key={index}>

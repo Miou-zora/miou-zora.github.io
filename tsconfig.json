@@ -23,6 +23,7 @@
   "include": [
     "src/**/*.ts",       // Adjust this pattern to match your project's file structure
     "src/**/*.tsx",      // If you're using TypeScript with React
-    ".eslintrc.js"        // Add this line to include .eslintrc.js
+    ".eslintrc.js",        // Add this line to include .eslintrc.js
+    "src/declarations.d.ts"
   ],
 }

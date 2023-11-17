@@ -9,18 +9,17 @@ function DisplayPersoExperience(props: { persoExperience: string, reverse: boole
     fill='transparent'
     stroke='white'
     strokeWidth={2} />
-  const persoExperienceText = <div>
-    <p>{props.persoExperience}</p>
-  </div>
 
   if (!props.reverse) {
     return (
       <table>
-        <td>
+        <td style={{ verticalAlign: 'middle' }}>
           {persoExperienceTriangle}
         </td>
         <td>
-          {persoExperienceText}
+          <div>
+            <p style={{ fontSize: 'min(5vw, 1.7rem)', marginLeft: '50px' }}>{props.persoExperience}</p>
+          </div>
         </td>
       </table>
     )
@@ -28,9 +27,11 @@ function DisplayPersoExperience(props: { persoExperience: string, reverse: boole
     return (
       <table>
         <td>
-          {persoExperienceText}
+          <div>
+            <p style={{ fontSize: 'min(5vw, 1.7rem)', textAlign: 'right', marginRight: '50px' }}>{props.persoExperience}</p>
+          </div>
         </td>
-        <td>
+        <td style={{ verticalAlign: 'middle' }}>
           {persoExperienceTriangle}
         </td>
       </table>
@@ -46,15 +47,27 @@ export default function PersoList(): JSX.Element {
     'GGJ 2023 Participation',
     'DevFest 2021 Volunteer'
   ]
+  const layers: JSX.Element[] = []
+
+  for (let i = 0; i < persoExperiences.length; i++) {
+    if (i % 2 === 1) {
+      layers.push(
+        <div key={i} style={{ display: 'flex', justifyContent: 'right', marginRight: 'min(1vw, 10rem)' }}>
+          <DisplayPersoExperience persoExperience={persoExperiences[i]} reverse={i % 2 === 1} />
+        </div>
+      )
+    } else {
+      layers.push(
+        <div key={i} style={{ marginLeft: 'min(1vw, 10rem)' }}>
+          <DisplayPersoExperience persoExperience={persoExperiences[i]} reverse={i % 2 === 1} />
+        </div>
+      )
+    }
+  }
+
   return (
     <div>
-      {persoExperiences.map((persoExperience, index) => {
-        return (
-          <div key={index}>
-            <DisplayPersoExperience persoExperience={persoExperience} reverse={index % 2 === 1} />
-          </div>
-        )
-      })}
+      {layers}
     </div>
   )
 }
