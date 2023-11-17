@@ -1,6 +1,8 @@
 body {
     color: #fff; /* Set the color of the blurred text */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.5);
     font-family: 'AgainstRegular';
 }
 
@@ -29,8 +31,26 @@ a {
     font-family: 'AgainstRegular';
 }
 
+h1 {
+    font-weight: 100;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-weight: 100;
+}
+
+h3 {
+    font-weight: 100;
+    font-size: 1.3rem;
+}
+
+h4 {
+    font-weight: 100;
+}
+
 .ellipse {
-    position: absolute;
+    position: fixed;
     width: 80%;
     height: 50%;
     transform: translate(-50%, -50%);

@@ -14,7 +14,7 @@ export default function MePage(): JSX.Element {
       <div className={style.middleButton}>
         <PageButtonWithText page="/" direction={Direction.Up} text="HOME" />
       </div>
-      <div style={{ margin: '0 2vh' }}>
+      <div style={{ margin: '0 2vw' }}>
         <MeAsAPerson />
         <ProudOf />
         <ProExp />
