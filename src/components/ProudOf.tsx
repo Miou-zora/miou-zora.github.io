@@ -28,7 +28,7 @@ export default function ProudOf(): JSX.Element {
             <td key={project.name}>
               <a href={project.link}>
                 <tr><h2 style={{ textAlign: 'center' }}>{project.name}</h2></tr>
-                <tr><p style={{ textAlign: 'center', fontSize: 'min(3vw, 1.2rem)' }}>{project.description}</p></tr>
+                <tr><p style={{ textAlign: 'center', fontSize: 'min(3vw, 1.2rem)', margin: '0 min(2vw, 4rem)', marginBottom: '5vh' }}>{project.description}</p></tr>
               </a>
             </td>
           )
