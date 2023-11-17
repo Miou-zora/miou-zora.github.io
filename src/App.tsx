@@ -10,7 +10,7 @@ function App(): JSX.Element {
   document.body.style.backgroundColor = '#000000'
   return (
     <div>
-      <div className="ellipse" />
+      {/* <div className="ellipse" /> */}
       <BrowserRouter basename={ `/${process.env.PUBLIC_URL}`}>
         <Routes>
           <Route path='' element={<HomePage/>} />
