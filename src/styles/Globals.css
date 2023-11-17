@@ -22,6 +22,7 @@ body {
 p {
     font-family: 'OpenSansHebrew';
     letter-spacing: 0.155em;
+    font-size: min(3.5vw, 1.2rem);
 }
 
 a {
@@ -33,16 +34,19 @@ a {
 
 h1 {
     font-weight: 100;
-    font-size: 3.5rem 3vw;
+    font-size: min(7vw, 3.5rem);
 }
 
 h2 {
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.5);
     font-weight: 100;
+    font-size: min(5vw, 2rem);
 }
 
 h3 {
     font-weight: 100;
-    font-size: 1.3rem;
 }
 
 h4 {
