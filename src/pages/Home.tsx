@@ -22,17 +22,16 @@ export default function HomePage(): JSX.Element {
 
   return (
     <div>
-      <h3 className={styles.workInProgress}>Work in progress...</h3>
       {title}
-      <div className={styles.leftButton}>
+      {/* <div className={styles.leftButton}>
         <PageButtonWithText page="/done" direction={Direction.Left} text='DONE'/>
-      </div>
+      </div> */}
       <div className={styles.bottomButton}>
         <PageButtonWithText page="/me" direction={Direction.Down} text='ME'/>
       </div>
-      <div className={styles.rightButton}>
+      {/* <div className={styles.rightButton}>
         <PageButtonWithText page="/todo" direction={Direction.Right} text='TODO'/>
-      </div>
+      </div> */}
     </div>
   )
 }
