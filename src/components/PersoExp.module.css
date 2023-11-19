@@ -4,21 +4,8 @@
   animation: 1s slide-right;
 }
 
-.table {
-  table-layout: fixed;
-  width: 100%;
-}
-
-.projectName {
-  text-align: center;
-  animation: 1.5s fade-in;
-}
-
-.projectDescription {
-  text-align: center;
-  font-size: min(3vw, 1.2rem);
-  margin: 0 min(2vw, 4rem);
-  margin-bottom: 5vh;
+.content {
+  margin: 20px;
   animation: 1.5s fade-in;
 }
 
