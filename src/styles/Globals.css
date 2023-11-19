@@ -2,7 +2,7 @@ body {
     color: #fff;
     /* Set the color of the blurred text */
     text-shadow:
-        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.5),
         0 0 5px rgba(255, 255, 255, 0.5);
     font-family: 'AgainstRegular';
 }
@@ -24,6 +24,9 @@ p {
     font-family: 'OpenSansHebrew';
     letter-spacing: 0.155em;
     font-size: min(3.5vw, 1.2rem);
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 a {

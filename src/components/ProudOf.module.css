@@ -22,6 +22,21 @@
   animation: 1.5s fade-in;
 }
 
+.ref:hover {
+  filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.3));
+  animation: size-up 0.5s;
+  scale: 1.15;
+}
+
+@keyframes size-up {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes slide-right {
   from {
     margin-right: -100%;

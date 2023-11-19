@@ -26,7 +26,7 @@ export default function ProudOf(): JSX.Element {
       <table className={styles.table}>
         {projects.map((project: Project) => {
           return (
-            <td key={project.name}>
+            <td key={project.name} className={styles.ref}>
               <a href={project.link}>
                 <tr><h2 className={styles.projectName}>{project.name}</h2></tr>
                 <tr><p className={styles.projectDescription}>{project.description}</p></tr>
