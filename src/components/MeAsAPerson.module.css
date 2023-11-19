@@ -1,0 +1,43 @@
+.meAsAPerson {
+  margin-left: 4vw;
+  animation: 1s slide-left;
+}
+
+.textContainer {
+  min-width: 50vw;
+  max-width: 600px;
+  margin: 4rem auto;
+}
+
+.text {
+  text-align: center;
+  font-weight: 100;
+  animation: 1s fade-in;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: -100%;
+    opacity: 0;
+  }
+
+  70% {
+    margin-left: 1.5vw;
+    opacity: 0.6;
+  }
+
+  to {
+    margin-left: 4vw;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

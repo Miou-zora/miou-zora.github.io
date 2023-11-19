@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './ProudOf.module.css'
 
 class Project {
   name: string
@@ -21,14 +22,14 @@ export default function ProudOf(): JSX.Element {
 
   return (
     <div>
-      <h1 style={{ marginRight: '4vw', textAlign: 'right' }}>PROUD OF</h1>
-      <table style={{ tableLayout: 'fixed', width: '100%' }}>
+      <h1 className={styles.title}>PROUD OF</h1>
+      <table className={styles.table}>
         {projects.map((project: Project) => {
           return (
             <td key={project.name}>
               <a href={project.link}>
-                <tr><h2 style={{ textAlign: 'center' }}>{project.name}</h2></tr>
-                <tr><p style={{ textAlign: 'center', fontSize: 'min(3vw, 1.2rem)', margin: '0 min(2vw, 4rem)', marginBottom: '5vh' }}>{project.description}</p></tr>
+                <tr><h2 className={styles.projectName}>{project.name}</h2></tr>
+                <tr><p className={styles.projectDescription}>{project.description}</p></tr>
               </a>
             </td>
           )
