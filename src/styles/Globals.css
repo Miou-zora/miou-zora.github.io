@@ -1,7 +1,8 @@
 body {
-    color: #fff; /* Set the color of the blurred text */
+    color: #fff;
+    /* Set the color of the blurred text */
     text-shadow:
-        0 0 5px rgba(255, 255, 255, 0.5),
+        0 0 10px rgba(255, 255, 255, 0.5),
         0 0 5px rgba(255, 255, 255, 0.5);
     font-family: 'AgainstRegular';
 }
@@ -9,20 +10,23 @@ body {
 @font-face {
     font-family: 'AgainstRegular';
     src: local('against regular'),
-    url('./fonts/against regular.otf') format('opentype'),
-    url('./fonts/against regular.ttf') format('truetype');
+        url('./fonts/against regular.otf') format('opentype'),
+        url('./fonts/against regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'OpenSansHebrew';
     src: local('OpenSansHebrew-Regular'),
-    url('./fonts/OpenSansHebrew-Regular.ttf') format('truetype');
+        url('./fonts/OpenSansHebrew-Regular.ttf') format('truetype');
 }
 
 p {
     font-family: 'OpenSansHebrew';
     letter-spacing: 0.155em;
     font-size: min(3.5vw, 1.2rem);
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 a {

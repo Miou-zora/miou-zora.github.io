@@ -1,0 +1,35 @@
+.title {
+  margin-left: 4vw;
+  animation: 1s slide-left;
+}
+
+.content {
+  animation: 1.5s fade-in;
+}
+
+@keyframes slide-left {
+  from {
+    margin-left: -100%;
+    opacity: 0;
+  }
+
+  70% {
+    margin-left: 1.5vw;
+    opacity: 0.6;
+  }
+
+  to {
+    margin-left: 4vw;
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
