@@ -2,11 +2,14 @@
   margin-right: 4vw;
   text-align: right;
   animation: 1s slide-right;
+  margin-bottom: 12vh;
+  margin-top: 12vh;
 }
 
 .content {
   margin: 20px;
   animation: 1.5s fade-in;
+  margin-bottom: 10vh;
 }
 
 @keyframes slide-right {

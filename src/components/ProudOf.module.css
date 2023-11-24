@@ -2,6 +2,8 @@
   margin-right: 4vw;
   text-align: right;
   animation: 1s slide-right;
+  margin-bottom: 8vh;
+  margin-top: 12vh;
 }
 
 .table {
@@ -16,7 +18,7 @@
 
 .projectDescription {
   text-align: center;
-  font-size: min(3vw, 1.2rem);
+  font-size: min(3vw, 32px);
   margin: 0 min(2vw, 4rem);
   margin-bottom: 5vh;
   animation: 1.5s fade-in;
