@@ -35,7 +35,7 @@ export default function PageButton(props: { children: any, page: string, directi
               <tr>
                 {props.children}
               </tr>
-              <tr style={{ justifyContent: 'center', display: 'flex' }}>
+              <tr style={{ justifyContent: 'center' }}>
                 <Triangle
                   direction={ props.direction }
                   width={50}
