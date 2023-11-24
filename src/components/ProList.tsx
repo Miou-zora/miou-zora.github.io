@@ -18,22 +18,46 @@ class ProExperience {
 }
 
 function DisplayProExperience(props: { proExperience: ProExperience }): JSX.Element {
+  // const triangle: JSX.Element = <Triangle
+  //   direction={ Direction.Right }
+  //   width={40}
+  //   height={40}
+  //   fill='transparent'
+  //   stroke='white'
+  //   strokeWidth={2} />
+
+  // make triangle responsive
+  const [triangle, setTriangle] = React.useState(<Triangle
+    direction={Direction.Right}
+    width={Math.min(window.innerWidth / 20, 40)}
+    height={Math.min(window.innerWidth / 20, 40)}
+    fill='transparent'
+    stroke='white'
+    strokeWidth={2} />)
+  React.useEffect(() => {
+    const handleResize = (): void => {
+      setTriangle(<Triangle
+        direction={Direction.Right}
+        width={Math.min(window.innerWidth / 20, 40)}
+        height={Math.min(window.innerWidth / 20, 40)}
+        fill='transparent'
+        stroke='white'
+        strokeWidth={2} />)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => { window.removeEventListener('resize', handleResize) }
+  }, [])
+
   return (
     <table>
       <tr>
         <td>
           <div style={{ marginRight: 'min(3vw, 2rem)' }}>
-            <Triangle
-              direction={ Direction.Right }
-              width={40}
-              height={40}
-              fill='transparent'
-              stroke='white'
-              strokeWidth={2} />
+            {triangle}
           </div>
         </td>
         <td>
-          <p style={{ fontSize: 'min(5vw, 1.7rem)', margin: 'auto' }}>{props.proExperience.job}</p>
+          <p style={{ fontSize: 'min(6vw, 45px)', margin: 'auto' }}>{props.proExperience.job}</p>
         </td>
       </tr>
       <tr>
@@ -41,7 +65,7 @@ function DisplayProExperience(props: { proExperience: ProExperience }): JSX.Elem
         <td>
           <p style={{ margin: 'auto' }}>{props.proExperience.company} · {props.proExperience.jobState}</p>
           <p style={{ margin: 'auto' }}>{props.proExperience.date.start} · {props.proExperience.date.end}</p>
-          <table>
+          <table style={{ margin: '0 min(2vw, 40px)' }}>
             <td>
               <p style={{ marginRight: '30px' }}>Techs:</p>
             </td>
@@ -63,7 +87,7 @@ export default function ProList(): JSX.Element {
       'OPEN',
       'Intership',
       { start: '2022-06', end: '2022-12' },
-      ['Docker', 'Agile methods', 'Full-stack', 'JIRA', 'GitLab', 'Java', 'Vue.js', 'JavaScript', 'Framework Spring', 'JavaServer Pages (JSP)']
+      ['Docker', 'Agile methods', 'Full-stack', 'JIRA', 'GitLab', 'Java', 'Vue.js', 'Spring', 'JavaServer Pages (JSP)']
     )]
   return (
     <div style={{ margin: '20px' }}>

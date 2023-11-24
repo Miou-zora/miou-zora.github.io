@@ -1,51 +1,90 @@
 import React from 'react'
 import Triangle, { Direction } from './Triangle'
 
-function DisplayPersoExperience(props: { persoExperience: string, reverse: boolean }): JSX.Element {
-  const persoExperienceTriangle = <Triangle
+class PersoExperience {
+  eventName: string
+  personalStatus: string
+  link: string
+
+  constructor(eventName: string, personalStatus: string, link: string) {
+    this.eventName = eventName
+    this.personalStatus = personalStatus
+    this.link = link
+  }
+}
+
+function DisplayPersoExperience(props: { persoExperience: PersoExperience, reverse: boolean }): JSX.Element {
+  // const persoExperienceTriangle = <Triangle
+  //   direction={ props.reverse ? Direction.Left : Direction.Right }
+  //   width={50}
+  //   height={50}
+  //   fill='transparent'
+  //   stroke='white'
+  //   strokeWidth={2} />
+
+  const [persoExperienceTriangle, setPersoExperienceTriangle] = React.useState(<Triangle
     direction={ props.reverse ? Direction.Left : Direction.Right }
-    width={50}
-    height={50}
+    width={Math.min(window.innerWidth / 15, 50)}
+    height={Math.min(window.innerWidth / 15, 50)}
     fill='transparent'
     stroke='white'
     strokeWidth={2} />
+  )
+
+  React.useEffect(() => {
+    const handleResize = (): void => {
+      setPersoExperienceTriangle(<Triangle
+        direction={ props.reverse ? Direction.Left : Direction.Right }
+        width={Math.min(window.innerWidth / 15, 50)}
+        height={Math.min(window.innerWidth / 15, 50)}
+        fill='transparent'
+        stroke='white'
+        strokeWidth={2} />)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => { window.removeEventListener('resize', handleResize) }
+  }, [])
 
   if (!props.reverse) {
     return (
-      <table>
-        <td style={{ verticalAlign: 'middle' }}>
-          {persoExperienceTriangle}
-        </td>
-        <td>
-          <div>
-            <p style={{ fontSize: 'min(5vw, 1.7rem)', marginLeft: '50px' }}>{props.persoExperience}</p>
-          </div>
-        </td>
-      </table>
+      <a href={props.persoExperience.link} target='_blank' rel='noreferrer' style={{ textDecoration: 'none' }}>
+        <table>
+          <td style={{ verticalAlign: 'middle' }}>
+            {persoExperienceTriangle}
+          </td>
+          <td>
+            <div>
+              <p style={{ fontSize: 'min(5vw, 32px)', marginLeft: '50px' }}>{props.persoExperience.eventName} {props.persoExperience.personalStatus}</p>
+            </div>
+          </td>
+        </table>
+      </a>
     )
   } else {
     return (
-      <table>
-        <td>
-          <div>
-            <p style={{ fontSize: 'min(5vw, 1.7rem)', textAlign: 'right', marginRight: '50px' }}>{props.persoExperience}</p>
-          </div>
-        </td>
-        <td style={{ verticalAlign: 'middle' }}>
-          {persoExperienceTriangle}
-        </td>
-      </table>
+      <a href={props.persoExperience.link} target='_blank' rel='noreferrer' style={{ textDecoration: 'none' }}>
+        <table>
+          <td>
+            <div>
+              <p style={{ fontSize: 'min(5vw, 32px)', textAlign: 'right', marginRight: '50px' }}>{props.persoExperience.eventName} {props.persoExperience.personalStatus}</p>
+            </div>
+          </td>
+          <td style={{ verticalAlign: 'middle' }}>
+            {persoExperienceTriangle}
+          </td>
+        </table>
+      </a>
     )
   }
 }
 
 export default function PersoList(): JSX.Element {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const persoExperiences: string[] = [
-    'Web2Day 2023 Volunteer',
-    'DevFest 2023 Volunteer',
-    'GGJ 2023 Participation',
-    'DevFest 2021 Volunteer'
+  const persoExperiences: PersoExperience[] = [
+    new PersoExperience('Web2Day 2023', 'Volunteer', 'https://web2day.co/'),
+    new PersoExperience('DevFest 2023', 'Volunteer', 'https://devfest2023.gdgnantes.com/'),
+    new PersoExperience('GGJ 2023', 'Participation', 'https://globalgamejam.org/'),
+    new PersoExperience('DevFest 2021', 'Volunteer', 'https://devfest2021.gdgnantes.com/fr/')
   ]
   const layers: JSX.Element[] = []
 

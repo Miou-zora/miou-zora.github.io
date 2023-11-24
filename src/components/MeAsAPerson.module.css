@@ -1,11 +1,13 @@
 .meAsAPerson {
   margin-left: 4vw;
   animation: 1s slide-left;
+  margin-bottom: 12vh;
+  margin-top: 8vh;
 }
 
 .textContainer {
   min-width: 50vw;
-  max-width: 600px;
+  max-width: 1449px;
   margin: 4rem auto;
 }
 

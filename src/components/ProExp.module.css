@@ -1,6 +1,8 @@
 .title {
   margin-left: 4vw;
   animation: 1s slide-left;
+  margin-bottom: 12vh;
+  margin-top: 12vh;
 }
 
 .content {

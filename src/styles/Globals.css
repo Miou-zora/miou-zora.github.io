@@ -16,14 +16,14 @@ body {
 
 @font-face {
     font-family: 'OpenSansHebrew';
-    src: local('OpenSansHebrew-Regular'),
-        url('./fonts/OpenSansHebrew-Regular.ttf') format('truetype');
+    src: local('OpenSansHebrew-Light'),
+        url('./fonts/OpenSansHebrew-Light.ttf') format('truetype');
 }
 
 p {
     font-family: 'OpenSansHebrew';
     letter-spacing: 0.155em;
-    font-size: min(3.5vw, 1.2rem);
+    font-size: min(4.5vw, 32px);
     text-shadow:
         0 0 10px rgba(255, 255, 255, 0.5),
         0 0 5px rgba(255, 255, 255, 0.5);
@@ -38,7 +38,7 @@ a {
 
 h1 {
     font-weight: 100;
-    font-size: min(7vw, 3.5rem);
+    font-size: min(7vw, 69px);
 }
 
 h2 {
@@ -46,7 +46,7 @@ h2 {
         0 0 5px rgba(255, 255, 255, 0.5),
         0 0 5px rgba(255, 255, 255, 0.5);
     font-weight: 100;
-    font-size: min(5vw, 2rem);
+    font-size: min(5vw, 60px);
 }
 
 h3 {
