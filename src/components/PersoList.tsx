@@ -1,5 +1,6 @@
 import React from 'react'
 import Triangle, { Direction } from './Triangle'
+import styles from './PersoList.module.css'
 
 class PersoExperience {
   eventName: string
@@ -47,8 +48,8 @@ function DisplayPersoExperience(props: { persoExperience: PersoExperience, rever
 
   if (!props.reverse) {
     return (
-      <a href={props.persoExperience.link} target='_blank' rel='noreferrer' style={{ textDecoration: 'none' }}>
-        <table>
+      <table className={styles.ref}>
+        <a href={props.persoExperience.link} target='_blank' rel='noreferrer'>
           <td style={{ verticalAlign: 'middle' }}>
             {persoExperienceTriangle}
           </td>
@@ -57,13 +58,13 @@ function DisplayPersoExperience(props: { persoExperience: PersoExperience, rever
               <p style={{ fontSize: 'min(5vw, 32px)', marginLeft: '50px' }}>{props.persoExperience.eventName} {props.persoExperience.personalStatus}</p>
             </div>
           </td>
-        </table>
-      </a>
+        </a>
+      </table>
     )
   } else {
     return (
-      <a href={props.persoExperience.link} target='_blank' rel='noreferrer' style={{ textDecoration: 'none' }}>
-        <table>
+      <table className={styles.ref}>
+        <a href={props.persoExperience.link} target='_blank' rel='noreferrer'>
           <td>
             <div>
               <p style={{ fontSize: 'min(5vw, 32px)', textAlign: 'right', marginRight: '50px' }}>{props.persoExperience.eventName} {props.persoExperience.personalStatus}</p>
@@ -72,8 +73,8 @@ function DisplayPersoExperience(props: { persoExperience: PersoExperience, rever
           <td style={{ verticalAlign: 'middle' }}>
             {persoExperienceTriangle}
           </td>
-        </table>
-      </a>
+        </a>
+      </table>
     )
   }
 }

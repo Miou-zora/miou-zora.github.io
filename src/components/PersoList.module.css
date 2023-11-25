@@ -1,0 +1,8 @@
+.ref {
+  transition: all 0.3s ease-in-out;
+}
+
+.ref:hover {
+  filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.3));
+  scale: 1.05;
+}

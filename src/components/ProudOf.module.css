@@ -29,7 +29,7 @@
 
 .ref:hover {
   filter: drop-shadow(0 0 0.1rem rgba(255, 255, 255, 0.3));
-  scale: 1.15;
+  scale: 1.1;
 }
 
 @keyframes slide-right {
