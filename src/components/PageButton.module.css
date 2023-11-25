@@ -3,4 +3,16 @@
     height: auto;
     padding: 0;
     margin: 10px;
+    opacity: 0.6;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .button {
+        opacity: 1;
+    }
+}
+
+.button:hover {
+    opacity: 1;
 }
