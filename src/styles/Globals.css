@@ -46,7 +46,7 @@ h2 {
         0 0 5px rgba(255, 255, 255, 0.5),
         0 0 5px rgba(255, 255, 255, 0.5);
     font-weight: 100;
-    font-size: min(5vw, 60px);
+    font-size: min(6vw, 60px);
 }
 
 h3 {

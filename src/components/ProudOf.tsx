@@ -20,21 +20,41 @@ export default function ProudOf(): JSX.Element {
     new Project('Star Worst', 'AR Project, where user is immersed in the death star scene of first Star Wars film using HTC Tracker.', 'https://github.com/Queng123/Project-DevFest')
   ]
 
-  return (
-    <div>
-      <h1 className={styles.title}>PROUD OF</h1>
-      <table className={styles.table}>
-        {projects.map((project: Project) => {
-          return (
-            <td key={project.name} className={styles.ref}>
-              <a href={project.link}>
-                <tr><h2 className={styles.projectName}>{project.name}</h2></tr>
-                <tr><p className={styles.projectDescription}>{project.description}</p></tr>
-              </a>
-            </td>
-          )
-        })}
-      </table>
-    </div>
-  )
+  if (window.innerWidth / window.innerHeight < 1) {
+    return (
+      <div>
+        <h1 className={styles.title}>PROUD OF</h1>
+        <table className={styles.table}>
+          {projects.map((project: Project) => {
+            return (
+              <tr key={project.name} className={styles.ref}>
+                <a href={project.link}>
+                  <tr><h2 className={styles.projectName}>{project.name}</h2></tr>
+                  <tr><p className={styles.projectDescription}>{project.description}</p></tr>
+                </a>
+              </tr>
+            )
+          })}
+        </table>
+      </div>
+    )
+  } else {
+    return (
+      <div>
+        <h1 className={styles.title}>PROUD OF</h1>
+        <table className={styles.table}>
+          {projects.map((project: Project) => {
+            return (
+              <td key={project.name} className={styles.ref}>
+                <a href={project.link}>
+                  <tr><h2 className={styles.projectName}>{project.name}</h2></tr>
+                  <tr><p className={styles.projectDescription}>{project.description}</p></tr>
+                </a>
+              </td>
+            )
+          })}
+        </table>
+      </div>
+    )
+  }
 }
