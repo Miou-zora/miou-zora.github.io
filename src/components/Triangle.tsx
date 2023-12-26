@@ -1,15 +1,15 @@
 import React from 'react'
 
-export enum Direction {
+export enum TriangleDirection {
   Up,
   Down,
   Left,
   Right,
 }
 
-export default function Triangle(props: { direction: Direction, width: number, height: number, fill: string, stroke: string, strokeWidth: number }): JSX.Element {
+export default function Triangle(props: { direction: TriangleDirection, width: number, height: number, fill: string, stroke: string, strokeWidth: number }): JSX.Element {
   switch (props.direction) {
-    case Direction.Up:
+    case TriangleDirection.Up:
       return (
         <svg xmlns="http://www.w3.org/2000/svg" width="70" height="62" viewBox="0 0 70 62" fill="none">
           <g filter="url(#filter0_f_59_163)">
@@ -25,7 +25,7 @@ export default function Triangle(props: { direction: Direction, width: number, h
           </defs>
         </svg>
       )
-    case Direction.Down:
+    case TriangleDirection.Down:
       return (<svg xmlns="http://www.w3.org/2000/svg" width="70" height="62" viewBox="0 0 70 62" fill="none">
         <g filter="url(#filter0_f_59_19)">
           <path d="M34.134 48.5L35 50L35.866 48.5L56.6506 12.5L57.5167 11L55.7846 11L14.2154 11L12.4833 11L13.3494 12.5L34.134 48.5Z" stroke="white" strokeWidth="2"/>
@@ -40,7 +40,7 @@ export default function Triangle(props: { direction: Direction, width: number, h
         </defs>
       </svg>
       )
-    case Direction.Left:
+    case TriangleDirection.Left:
       return (
         <svg xmlns="http://www.w3.org/2000/svg" width="62" height="70" viewBox="0 0 62 70" fill="none">
           <g filter="url(#filter0_f_59_23)">

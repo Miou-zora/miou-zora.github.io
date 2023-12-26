@@ -1,6 +1,6 @@
 import React from 'react'
 import PageButtonWithText from '../components/PageButtonWithText'
-import { Direction } from '../components/Triangle'
+import { TriangleDirection } from '../components/Triangle'
 import '../styles/Globals.css'
 import styles from './Home.module.css'
 
@@ -27,7 +27,7 @@ export default function HomePage(): JSX.Element {
         <PageButtonWithText page="/done" direction={Direction.Left} text='DONE'/>
       </div> */}
       <div className={styles.bottomButton}>
-        <PageButtonWithText page="/me" direction={Direction.Down} text='ME'/>
+        <PageButtonWithText page="/me" direction={TriangleDirection.Down} text='ME'/>
       </div>
       {/* <div className={styles.rightButton}>
         <PageButtonWithText page="/todo" direction={Direction.Right} text='TODO'/>

@@ -1,9 +1,9 @@
 import React from 'react'
-import { Direction } from './Triangle'
+import { TriangleDirection } from './Triangle'
 import PageButton from './PageButton'
 
-export default function PageButtonWithText(props: { page: string, direction: Direction, text: string }): JSX.Element {
-  if (props.direction === Direction.Left || props.direction === Direction.Right) {
+export default function PageButtonWithText(props: { page: string, direction: TriangleDirection, text: string }): JSX.Element {
+  if (props.direction === TriangleDirection.Left || props.direction === TriangleDirection.Right) {
     return (<PageButton page={props.page} direction={props.direction}>
       {props.text.split('').map((character, index) => {
         return (

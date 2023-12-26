@@ -1,5 +1,5 @@
 import React from 'react'
-import Triangle, { Direction } from './Triangle'
+import Triangle, { TriangleDirection } from './Triangle'
 
 class ProExperience {
   job: string
@@ -28,7 +28,7 @@ function DisplayProExperience(props: { proExperience: ProExperience }): JSX.Elem
 
   // make triangle responsive
   const [triangle, setTriangle] = React.useState(<Triangle
-    direction={Direction.Right}
+    direction={TriangleDirection.Right}
     width={Math.min(window.innerWidth / 20, 40)}
     height={Math.min(window.innerWidth / 20, 40)}
     fill='transparent'
@@ -37,7 +37,7 @@ function DisplayProExperience(props: { proExperience: ProExperience }): JSX.Elem
   React.useEffect(() => {
     const handleResize = (): void => {
       setTriangle(<Triangle
-        direction={Direction.Right}
+        direction={TriangleDirection.Right}
         width={Math.min(window.innerWidth / 20, 40)}
         height={Math.min(window.innerWidth / 20, 40)}
         fill='transparent'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Triangle, { Direction } from './Triangle'
+import Triangle, { TriangleDirection } from './Triangle'
 import styles from './PersoList.module.css'
 
 class PersoExperience {
@@ -24,7 +24,7 @@ function DisplayPersoExperience(props: { persoExperience: PersoExperience, rever
   //   strokeWidth={2} />
 
   const [persoExperienceTriangle, setPersoExperienceTriangle] = React.useState(<Triangle
-    direction={ props.reverse ? Direction.Left : Direction.Right }
+    direction={ props.reverse ? TriangleDirection.Left : TriangleDirection.Right }
     width={Math.min(window.innerWidth / 15, 50)}
     height={Math.min(window.innerWidth / 15, 50)}
     fill='transparent'
@@ -35,7 +35,7 @@ function DisplayPersoExperience(props: { persoExperience: PersoExperience, rever
   React.useEffect(() => {
     const handleResize = (): void => {
       setPersoExperienceTriangle(<Triangle
-        direction={ props.reverse ? Direction.Left : Direction.Right }
+        direction={ props.reverse ? TriangleDirection.Left : TriangleDirection.Right }
         width={Math.min(window.innerWidth / 15, 50)}
         height={Math.min(window.innerWidth / 15, 50)}
         fill='transparent'

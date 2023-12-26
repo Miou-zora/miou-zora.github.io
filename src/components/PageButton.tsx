@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './PageButton.module.css'
-import Triangle, { Direction } from './Triangle'
+import Triangle, { TriangleDirection } from './Triangle'
 
-export default function PageButton(props: { children: any, page: string, direction: Direction }): JSX.Element {
-  if (Direction.Left === props.direction) {
+export default function PageButton(props: { children: any, page: string, direction: TriangleDirection }): JSX.Element {
+  if (TriangleDirection.Left === props.direction) {
     return (
       <div className={styles.button}>
         <a href={props.page}>
@@ -26,7 +26,7 @@ export default function PageButton(props: { children: any, page: string, directi
         </a>
       </div>
     )
-  } else if (Direction.Down === props.direction) {
+  } else if (TriangleDirection.Down === props.direction) {
     return (
       <div className={styles.button}>
         <a href={props.page}>
@@ -49,7 +49,7 @@ export default function PageButton(props: { children: any, page: string, directi
         </a>
       </div>
     )
-  } else if (Direction.Up === props.direction) {
+  } else if (TriangleDirection.Up === props.direction) {
     return (
       <div className={styles.button}>
         <a href={props.page}>
