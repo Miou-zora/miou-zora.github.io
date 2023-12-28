@@ -1,0 +1,7 @@
+.selectableProject {
+  margin: 10px;
+}
+
+.selectableProject:hover {
+  cursor: pointer;
+}
