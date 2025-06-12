@@ -18,15 +18,6 @@ class ProExperience {
 }
 
 function DisplayProExperience(props: { proExperience: ProExperience }): JSX.Element {
-  // const triangle: JSX.Element = <Triangle
-  //   direction={ Direction.Right }
-  //   width={40}
-  //   height={40}
-  //   fill='transparent'
-  //   stroke='white'
-  //   strokeWidth={2} />
-
-  // make triangle responsive
   const [triangle, setTriangle] = React.useState(<Triangle
     direction={Direction.Right}
     width={Math.min(window.innerWidth / 20, 40)}
@@ -80,15 +71,22 @@ function DisplayProExperience(props: { proExperience: ProExperience }): JSX.Elem
 }
 
 export default function ProList(): JSX.Element {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const proExperiences: ProExperience[] = [
+    new ProExperience(
+      'Fullstack Developer',
+      'Ganacos',
+      'Intership',
+      { start: '2024-02', end: '2024-05' },
+      ['AngularJS', 'ReactJS', 'Java', 'BitBucket', 'Full-stack', 'JavaScript']
+    ),
     new ProExperience(
       'Fullstack Developer',
       'OPEN',
       'Intership',
       { start: '2022-06', end: '2022-12' },
       ['Docker', 'Agile methods', 'Full-stack', 'JIRA', 'GitLab', 'Java', 'Vue.js', 'Spring', 'JavaServer Pages (JSP)']
-    )]
+    )
+  ]
   return (
     <div style={{ margin: '20px' }}>
       {proExperiences.map((proExperience, index) => {

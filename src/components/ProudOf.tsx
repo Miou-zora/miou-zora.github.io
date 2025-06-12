@@ -16,8 +16,8 @@ class Project {
 export default function ProudOf(): JSX.Element {
   const projects: Project[] = [
     new Project('Raytracer', 'Implementation of a Raytracer using Monte Carlo method or approximation of light\'s rays of a surface.', 'https://github.com/Miou-zora/Raytracer'),
-    new Project('Replic', 'A CI / CD project creator that create a mirror of a project. It create a basic Github Actions workflow, and can be customized to add contributors, files to the projet.', 'https://github.com/Miou-zora/Replic'),
-    new Project('Star Worst', 'AR Project, where user is immersed in the death star scene of first Star Wars film using HTC Tracker.', 'https://github.com/Queng123/Project-DevFest')
+    new Project('Engine Squared', 'A game engine that aims to provide a developer friendly and open-source alternative for 3D game development. It is designed to provide accurate physics simulation and visually appealing graphics in a single package.', 'https://github.com/EngineSquared/EngineSquared'),
+    new Project('R-Type', 'This project is a reproduction of "R-Type" game using a custom game engine (ECS) and up for 4 players in a same room.', 'https://github.com/Miou-zora/R-Type')
   ]
 
   if (window.innerWidth / window.innerHeight < 1) {
